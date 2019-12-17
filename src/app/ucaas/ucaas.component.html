@@ -1,0 +1,51 @@
+<body>
+        <app-header></app-header>
+        <div class="row mt-3 mb-5">
+          <div class="col-md-4">
+            <!-- Side Menu -->
+            <div class="col-sm-12 ml-1">
+              <div class="card text-center bg-secondary text-white mb-3">
+                <a href="posts.html" class="btn btn-outline-light btn-sm">
+                  <div class="card-body">
+                    <p>{{ tot }}</p>
+                    <h5 class="display-4">1298</h5>
+                  </div>
+                </a>
+              </div>
+              <div class="row ml-1">
+                <div class="card text-center bg-success text-white mb-3">
+                  <a href="posts.html" class="btn btn-outline-light btn-sm">
+                    <div class="card-body">
+                      <p>{{ completed }}</p>
+                      <h5 class="display-4">858</h5>
+                    </div>
+                  </a>
+                </div>
+                <div class="card text-center bg-warning text-white mb-3 ml-2">
+                  <a href="posts.html" class="btn btn-outline-light btn-sm">
+                    <div class="card-body">
+                      <p class="display-6">{{ modified }}</p>
+                      <h5 class="display-4">322</h5>
+                    </div>
+                  </a>
+                </div>
+              </div>
+      
+              <div class="card text-center bg-danger text-white mb-3">
+                <a href="posts.html" class="btn btn-outline-light btn-sm">
+                  <div class="card-body">
+                    <p>{{ failed }}</p>
+                    <h5 class="display-4">118</h5>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="div">
+              <app-main></app-main>
+            </div>
+          </div>
+        </div>
+      </body>
+      

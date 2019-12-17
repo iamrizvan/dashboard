@@ -1,0 +1,144 @@
+<body>
+  <app-header></app-header>
+  <div class="row mt-3 mb-5 ml-0">
+    <div class="col-lg-8 ">
+      <div class="row d-flex justify-content-between">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+          <div class="card text-center mb-3 p-0">
+            <div class="shadow bg-black rounded p-2">
+              <svg width="100" height="100">
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="40"
+                  stroke="blue"
+                  stroke-width="4"
+                  fill="white"
+                />
+                Sorry, your browser does not support inline SVG.
+                <text
+                  fill="#000000"
+                  font-size="20"
+                  font-family="Verdana"
+                  x="24"
+                  y="58"
+                >
+                  1323
+                </text>
+              </svg>
+              <p>{{ tot }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+          <div class="card text-center mb-3 p-0">
+            <div class="shadow bg-black rounded p-2">
+              <svg width="100" height="100">
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="40"
+                  stroke="green"
+                  stroke-width="4"
+                  fill="white"
+                />
+                Sorry, your browser does not support inline SVG.
+                <text
+                  fill="#000000"
+                  font-size="20"
+                  font-family="Verdana"
+                  x="24"
+                  y="58"
+                >
+                  1125
+                </text>
+              </svg>
+              <p>{{ completed }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+          <div class="card text-center mb-3 p-0">
+            <div class="shadow bg-black rounded p-2">
+              <svg width="100" height="100">
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="40"
+                  stroke="orange"
+                  stroke-width="4"
+                  fill="white"
+                />
+                Sorry, your browser does not support inline SVG.
+                <text
+                  fill="#000000"
+                  font-size="20"
+                  font-family="Verdana"
+                  x="24"
+                  y="58"
+                >
+                  175
+                </text>
+              </svg>
+              <p>{{ modified }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+          <div class="card text-center mb-3 p-0">
+            <div class="shadow bg-black rounded p-2">
+              <svg width="100" height="100">
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="40"
+                  stroke="red"
+                  stroke-width="4"
+                  fill="white"
+                />
+                Sorry, your browser does not support inline SVG.
+                <text
+                  fill="#000000"
+                  font-size="20"
+                  font-family="Verdana"
+                  x="32"
+                  y="58"
+                >
+                  23
+                </text>
+              </svg>
+              <p>{{ failed }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-between">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-6 mt-1">
+          <div class="card ">
+            <div class="shadow bg-black rounded p-2">
+              <canvas id="barChartELife"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-6 mt-1">
+          <div class="card ">
+            <div class="shadow bg-black rounded p-2">
+              <canvas id="lineChartELife"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-4 mt-1">
+      <div class="div">
+        <div class="col-sm-12">
+          <div class="card ">
+            <div class="shadow bg-black rounded p-3">
+              <canvas id="pieChartELife" width="400" height="400"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
