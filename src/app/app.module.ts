@@ -8,7 +8,7 @@ import { SideMenuComponent } from './side-menu/side-menu.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MainComponent } from './main/main.component';
 import { HeaderComponent } from './header/header.component';
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './auth/login/login.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ElifeComponent } from './elife/elife.component';
@@ -16,6 +16,7 @@ import { UcaasComponent } from './ucaas/ucaas.component';
 import { VsaasComponent } from './vsaas/vsaas.component';
 import { CleanPipeComponent } from './clean-pipe/clean-pipe.component';
 import { NtcpeComponent } from './ntcpe/ntcpe.component';
+import { SignupComponent } from './signup/signup.component';
 
 const appRoutes: Routes = [
   { path: '', component: LoginComponent },
@@ -43,7 +44,8 @@ const appRoutes: Routes = [
     UcaasComponent,
     VsaasComponent,
     CleanPipeComponent,
-    NtcpeComponent
+    NtcpeComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

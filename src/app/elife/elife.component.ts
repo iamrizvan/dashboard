@@ -35,7 +35,7 @@ data: {
  labels: ["Pre-Cnfg", "Prosioning", "Full Actn", "Patch", "Cessassion"],
  datasets: [{
      label: 'Percentage of Service Order for projects provisioned through E2ESO',
-     data: [123,42,19,8,19],
+     data: [95,83,91,61,79],
      fill:true,
      lineTension:0.2,
      borderColor:"green",

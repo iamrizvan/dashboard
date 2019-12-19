@@ -1,0 +1,51 @@
+<body>
+  <!-- LOGIN -->
+  <div class="container d-flex h-100">
+    <div class="row justify-content-center align-self-center my-auto mx-auto">
+      <div class="col-md-4">
+        <div class="col-sm-12">
+          <img
+            src="assets/img/etisalat.png"
+            class="img-fluid"
+            alt=""
+            height="50"
+          />
+        </div>
+        <div>
+          <form (ngSubmit)="onSubmit()" >
+            <div class="form-group">
+              <div class="input-container">
+                <i class="fas fa-user times icon"></i>
+                <input
+                  type="text"
+                  id="username"
+                  placeholder="Username"
+                  class="form-control"
+                  name="username"
+                  ngModel
+                  required/>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-container">
+                <i class="fas fa-key times icon"></i>
+                <input
+                id="password"
+                  type="password"
+                  placeholder="Password"
+                  class="form-control"
+                  name="password"
+                  mgModel
+                />
+              </div>
+            </div>
+            <div class="input-container">
+              <i class="fas fa-key1 times icon"></i>
+              <a href='home' class="btn btn-primary" type="submit" style="width: 100%;">Login</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
