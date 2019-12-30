@@ -1,32 +1,32 @@
-import { Component, OnInit, ViewChild, NgModule} from '@angular/core';
-import { Router } from '@angular/router';
-import { NgForm, FormsModule } from '@angular/forms';
+import { Component, ViewChild, NgModule } from "@angular/core";
+import { Router } from "@angular/router";
+import { NgForm } from "@angular/forms";
+import { AuthService } from './auth.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: "app-login",
+  templateUrl: "./login.component.html",
+  styleUrls: ["./login.component.scss"]
 })
 
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
-  // @ViewChild("myForm") signInForm:NgForm;
-
-  constructor(private router: Router) { }
-
-  ngOnInit() {
-  }  
-
- 
-  loadHomePage()
-  {
-    // complex calculation 
-    this.router.navigate(['home']);
+  badCredentials:boolean;
+  constructor(private router: Router, private authService:AuthService) {
+    this.badCredentials = false;
   }
 
-  onSubmit()
-  {
-    // complex calculation 
-    this.router.navigate(['home']); 
+  onLogin(loginForm: NgForm) {
+    const email = loginForm.value.username+"@gmail.com";
+    const password = loginForm.value.pass;
+    this.badCredentials = this.authService.signInUser(email,password);  
+   /* if(this.authService.isAuthenticated)
+    {
+      this.router.navigate(['home']);
+    }
+    else{
+          console.log("Login failed.")
+    }
+      */
   }
 }

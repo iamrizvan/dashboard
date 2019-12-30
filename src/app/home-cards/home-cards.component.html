@@ -1,0 +1,209 @@
+<div class="col-sm-12" >
+    <div class="row d-flex justify-content-between">
+      <div *ngFor="let product of products" class="col-xs-6 col-sm-4 col-md-4 col-lg-2">
+        <div class="card text-center mb-3 p-0">
+          <div class="shadow bg-black rounded p-2">
+
+            <ng-template  [ngIf]="product.percentage >= 80">
+              <circle-progress class="dash-font" 
+              [percent]= product.percentage
+              [radius]="80"
+              [outerStrokeWidth]="12"
+              [innerStrokeWidth]="3"
+              [outerStrokeColor]="'#82CC07'"
+              [innerStrokeColor]="'#BDBAB7'"
+              [animation]="true"
+              [unitsFontSize]="16"
+              [animationDuration]="300"
+              [subtitle]="lkasnfndj"
+              [responsive]="true"
+              [titleFontSize]="40"
+              [showSubtitle]="false"
+            ></circle-progress>
+            </ng-template>
+
+            <ng-template [ngIf]="product.percentage >= 50 && 80 > product.percentage">
+              <circle-progress class="dash-font" 
+              [percent]= product.percentage
+              [radius]="80"
+              [outerStrokeWidth]="12"
+              [innerStrokeWidth]="3"
+              [outerStrokeColor]="'#FC9E1E'"
+              [innerStrokeColor]="'#BDBAB7'"
+              [animation]="true"
+              [unitsFontSize]="16"
+              [animationDuration]="300"
+              [subtitle]="lkasnfndj"
+              [responsive]="true"
+              [titleFontSize]="40"
+              [showSubtitle]="false"
+            ></circle-progress>
+            </ng-template>
+
+            <ng-template [ngIf]="product.percentage >= 0 && 50 > product.percentage">
+              <circle-progress class="dash-font" 
+              [percent]= product.percentage
+              [radius]="80"
+              [outerStrokeWidth]="12"
+              [innerStrokeWidth]="3"
+              [outerStrokeColor]="'#F6400F'"
+              [innerStrokeColor]="'#BDBAB7'"
+              [animation]="true"
+              [unitsFontSize]="16"
+              [animationDuration]="300"
+              [subtitle]="lkasnfndj"
+              [responsive]="true"
+              [titleFontSize]="40"
+              [showSubtitle]="false"
+            ></circle-progress>
+            </ng-template>
+            
+            <div class="text-center">
+              <p class="dash-font" style="color: black; font-size: 25;">{{ product.name }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+   <!--   <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2">
+        <div class="card text-center mb-3 p-0">
+          <div class="shadow bg-black rounded p-2">
+            <circle-progress  class="dash-font" 
+              [percent]="74"
+              [radius]="80"
+              [outerStrokeWidth]="12"
+              [innerStrokeWidth]="3"
+              [outerStrokeColor]="'#FEB43C'"
+              [innerStrokeColor]="'#BDBAB7'"
+              [animation]="true"
+              [animationDuration]="400"
+              [responsive]="true"
+              [unitsFontSize]="16"
+              [animateSubtitle]="true"
+              [subtitleFontSize]="16"
+              [titleFontSize]="40"
+              [showSubtitle]="false"
+              ></circle-progress>
+              <div class="text-center">
+                <p class="dash-font"  style="color: black;">{{ ucaas }}</p>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2">
+        <div class="card text-center mb-3 p-0">
+          <div class="shadow bg-black rounded p-2">
+            <circle-progress  class="dash-font" 
+              [percent]="65"
+              [radius]="80"
+              [outerStrokeWidth]="12"
+              [innerStrokeWidth]="3"
+              [outerStrokeColor]="'#9B5EEE'"
+              [innerStrokeColor]="'#BDBAB7'"
+              [animation]="true"
+              [animationDuration]="500"
+              [responsive]="true"
+              [unitsFontSize]="16"
+              [titleFontSize]="40"
+              [showSubtitle]="false"
+              ></circle-progress>
+              <div class="text-center">
+                <p class="dash-font"  style="color: black;">{{ vsaas }}</p>
+              </div>
+          </div>
+        </div>
+      </div><div class="col-xs-6 col-sm-4 col-md-4 col-lg-2">
+        <div class="card text-center mb-3 p-0">
+          <div class="shadow bg-black rounded p-2">
+            <circle-progress  class="dash-font" 
+              [percent]="87"
+              [radius]="80"
+              [outerStrokeWidth]="12"
+              [innerStrokeWidth]="3"
+              [outerStrokeColor]="'#F9E951'"
+              [innerStrokeColor]="'#BDBAB7'"
+              [animation]="true"
+              [animationDuration]="600"
+              [responsive]="true"
+              [titleFontSize]="40"
+              [unitsFontSize]="16"
+              [showSubtitle]="false"
+              ></circle-progress>
+              <div class="text-center">
+                <p class="dash-font"  style="color: black;">{{ clean_pipe }}</p>
+              </div>
+          </div>
+        </div>
+      </div><div class="col-xs-6 col-sm-4 col-md-4 col-lg-2">
+        <div class="card text-center mb-3 p-0">
+          <div class="shadow bg-black rounded p-2">
+            <circle-progress  class="dash-font" 
+              [percent]="91"
+              [radius]="80"
+              [outerStrokeWidth]="12"
+              [innerStrokeWidth]="3"
+              [outerStrokeColor]="'#51F9B4'"
+              [innerStrokeColor]="'#BDBAB7'"
+              [animation]="true"
+              [animationDuration]="700"
+              [responsive]="true"
+              [titleFontSize]="40"
+              [unitsFontSize]="16"
+              [showSubtitle]="false"
+              ></circle-progress>
+              <div class="text-center">
+                <p class="dash-font"  style="color: black;">{{ ntcpe }}</p>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2">
+        <div class="card text-center mb-3 p-0">
+          <div class="shadow bg-black rounded p-2">
+            <circle-progress class="dash-font" 
+              [percent]="89"
+              [radius]="80"
+              [outerStrokeWidth]="12"
+              [innerStrokeWidth]="3"
+              [outerStrokeColor]="'#056C0F'"
+              [innerStrokeColor]="'#BDBAB7'"
+              [animation]="true"
+              [animationDuration]="900"
+              [unitsFontSize]="16"
+              [responsive]="true"
+              [titleFontSize]="40"
+              [showSubtitle]="false"
+            ></circle-progress>
+            <div class="text-center">
+              <p class="dash-font"  style="color: black;">{{ over_all }}</p>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      </div>
+</div>
+
+
+
+<!-- Card Animation Effect Script -->
+
+<script>
+  $(document).ready(function(){
+      $('.col-lg-2').hover(
+          // trigger when mouse hover
+          function(){
+              $(this).animate({
+                  marginTop: "+=2%",
+              },200);
+          },
+
+          // trigger when mouse out
+          function(){
+              $(this).animate({
+                  marginTop: "0%"
+              },200);
+          }
+      );
+  });
+</script>

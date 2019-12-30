@@ -1,0 +1,62 @@
+<body>
+    <!-- LOGIN -->
+    <div class="d-flex h-100">
+      <div
+        class="row justify-content-center  my-auto mx-auto">
+        <div class="col-md-6">
+          <div class="d-flex mb-5">
+            <img
+              src="assets/img/etisalat.png"
+              class="mx-auto"
+              width="50%"
+              alt="Cinque Terre"/>
+          </div>
+          <div class="row justify-content-center ">
+            <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+              <div 
+              id="user-data">
+                <div class="form-group">
+                  <div class="input-container">
+                    <i class="fas fa-user times icon"></i>
+                    <input
+                      type="text"
+                      placeholder="Username"
+                      class="form-control"
+                      name="username"
+                      ngModel
+                      required
+                      #user="ngModel"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-container">
+                    <i class="fas fa-key times icon"></i>
+                    <input
+                      type="password"
+                      placeholder="Password"
+                      class="form-control"
+                      name="pass"
+                      ngModel
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="input-container">
+                <i class="fas fa-key1 times icon"></i>
+                <button
+                  class="btn btn-success"
+                  type="submit"
+                  style="width: 100%;"
+                  [disabled]="!f.valid">
+                  Register
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  

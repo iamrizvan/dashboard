@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule, Routes, Router, ActivatedRoute } from '@angular/router';
+import { AuthService } from '../auth/login/auth.service';
+
 
 
 @Component({
@@ -9,7 +11,7 @@ import { RouterModule, Routes, Router, ActivatedRoute } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  constructor(private router: Router, private route: ActivatedRoute, private authServiice: AuthService) { }
 
   ngOnInit() {
 
@@ -21,8 +23,14 @@ export class HeaderComponent implements OnInit {
   clean_pipe = 'Clean Pipe';
   ntcpe = 'Nokia Thin CPE';
 
+
    goToELife()
    {
         this.router.navigate(['elife'],{relativeTo : this.route})
    }
+
+    logOutuser()
+    {
+       this.authServiice.logOut();
+    }
 }

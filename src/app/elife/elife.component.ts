@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart } from 'chart.js';
-
 import { ELifeModel } from './elife.model';
 
 @Component({

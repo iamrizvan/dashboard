@@ -1,49 +1,62 @@
 <body>
   <!-- LOGIN -->
-  <div class="container d-flex h-100">
-    <div class="row justify-content-center align-self-center my-auto mx-auto">
-      <div class="col-md-4">
-        <div class="col-sm-12">
+  <div class="d-flex h-100">
+    <div
+      class="row justify-content-center  my-auto mx-auto">
+      <div class="col-md-6">
+        <div class="d-flex mb-5">
           <img
             src="assets/img/etisalat.png"
-            class="img-fluid"
-            alt=""
-            height="50"
-          />
+            class="mx-auto"
+            width="50%"
+            alt="Cinque Terre"/>
         </div>
-        <div>
-          <form (ngSubmit)="onSubmit()" >
-            <div class="form-group">
-              <div class="input-container">
-                <i class="fas fa-user times icon"></i>
-                <input
-                  type="text"
-                  id="username"
-                  placeholder="Username"
-                  class="form-control"
-                  name="username"
-                  ngModel
-                  required/>
+        <div class="row justify-content-center ">
+          <form (ngSubmit)="onLogin(f)" #f="ngForm">
+            <div 
+            id="user-data">
+              <div class="form-group">
+                <div class="input-container">
+                  <i class="fas fa-user times icon"></i>
+                  <input
+                    type="text"
+                    placeholder="Username"
+                    class="form-control"
+                    name="username"
+                    ngModel
+                    required
+                    #user="ngModel"
+                  />
+                </div>
               </div>
-            </div>
-            <div class="form-group">
-              <div class="input-container">
-                <i class="fas fa-key times icon"></i>
-                <input
-                id="password"
-                  type="password"
-                  placeholder="Password"
-                  class="form-control"
-                  name="password"
-                  mgModel
-                />
+              <div class="form-group">
+                <div class="input-container">
+                  <i class="fas fa-key times icon"></i>
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    class="form-control"
+                    name="pass"
+                    ngModel
+                    required
+                  />
+                </div>
               </div>
             </div>
             <div class="input-container">
               <i class="fas fa-key1 times icon"></i>
-              <a href='home' class="btn btn-primary" type="submit" style="width: 100%;">Login</a>
+              <button
+                class="btn btn-success"
+                type="submit"
+                style="width: 100%;"
+                [disabled]="!f.valid">
+                Login
+              </button>
             </div>
           </form>
+        </div>
+        <div *ngIf="badCredentials" class="text-center text-white">
+          <p style="color: red;">Bad Credentials!</p>
         </div>
       </div>
     </div>

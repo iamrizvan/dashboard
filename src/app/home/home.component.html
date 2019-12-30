@@ -1,12 +1,43 @@
 <app-header></app-header>
- <div class="row mt-3 mb-5">
-   <div class="col-md-4">
-     <app-side-menu></app-side-menu>
-   </div>
-   <div class="col-md-8">
-     <div class="div">
-       <app-main></app-main>
-     </div>
-   </div>
- </div>
- <app-footer></app-footer>
+<div class="container-fluid">
+<div class="row d-flex justify-content-between">  
+    <div class="col-sm-12 col-lg-12 mb-1">
+      <div id="cardheight" class="row d-flex justify-content-between"> 
+        <app-home-cards></app-home-cards>
+      </div>
+      <div class="row d-flex justify-content-between"> 
+        <div class="col-xs-12 col-sm-12 col-lg-4 mt-1">
+          <div class="card ">
+            <div class="shadow bg-black rounded p-2">
+              <canvas id="pieChartHome"></canvas>
+            </div>
+          </div>
+        </div> 
+        <div class="col-xs-12 col-sm-12 col-lg-4 mt-1">
+          <div class="card ">
+            <div class="shadow bg-black rounded p-2">
+              <canvas id="lineChartHome"></canvas>
+              <div class="text-center">
+                <p class="dash-font"  style="color: black;">Service-Order | Environments</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-lg-4 mt-1">
+          <div class="card ">
+            <div class="shadow bg-black rounded p-2">
+              <div class="chart-bar"
+              >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="node_modules/chart.js/Chart.min.js"></script>
+<script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+<app-footer></app-footer>
+
